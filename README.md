@@ -1,3 +1,7 @@
+# nextjs-typescript-pokedex
+
+![poke](https://user-images.githubusercontent.com/7008002/198541794-bad9a680-c05e-48d6-8574-17b56b1ebec9.png)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
