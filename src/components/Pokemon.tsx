@@ -137,9 +137,10 @@ const Pokemon = (poke: Poke) => {
   const mainType = data.types[0].type.name
   const sub = data.types[1] ? data.types[1].type.name : ''
   const subType = sub || mainType
+  const types = data.types.map(item => item.type.name).join('-')
   return (
     <>
-      <div className='pokemon' css={boxStyle(mainType, subType)} data-type={mainType}>
+      <div className='pokemon' css={boxStyle(mainType, subType)} data-type={types}>
         <div className='pokemon-inner' css={boxInnerStyle}>
           <div className='pokemon-image image' css={imageStyle}>
             <img src={data.image} alt={data.name} />
