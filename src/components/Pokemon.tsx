@@ -130,6 +130,11 @@ const imageStyle = css`
   border-radius: 4px;
   overflow: hidden;
   position: relative;
+  img {
+    height: 100px;
+    width: auto;
+    filter: drop-shadow(7px 7px 0px #dbdbdb);
+  }
 `
 
 const Pokemon = (poke: Poke) => {
@@ -138,12 +143,14 @@ const Pokemon = (poke: Poke) => {
   const sub = data.types[1] ? data.types[1].type.name : ''
   const subType = sub || mainType
   const types = data.types.map(item => item.type.name).join('-')
+  const imagePath = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${data.index}.png`
   return (
     <>
       <div className='pokemon' css={boxStyle(mainType, subType)} data-type={types}>
         <div className='pokemon-inner' css={boxInnerStyle}>
           <div className='pokemon-image image' css={imageStyle}>
-            <img src={data.image} alt={data.name} />
+            {/* <img src={data.image} alt={data.name} /> */}
+            <img src={imagePath} alt={data.name} />
             <p css={numberStyle}>No.{data.index}</p>
           </div>
           <p css={itemStyle}>{data.name}</p>
